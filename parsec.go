@@ -17,6 +17,10 @@ type MockContext struct {
 	Context
 }
 
+func NewMockContext() MockContext {
+	return MockContext{}
+}
+
 func (c MockContext) KVStore(key sdk.StoreKey) KVStore {
 	return kvstore
 }
